@@ -9,7 +9,7 @@ Image restoration (IR) is a long-standing task to recover a high-quality image f
 ## Installation
 For installing, follow these instructions:
 ~~~
-conda install pytorch=1.11.1 torchvision=0.13.1 -c pytorch
+conda install pytorch=1.11.0 torchvision=0.12.1 -c pytorch
 pip install tensorboard einops scikit-image pytorch_msssim opencv-python
 ~~~
 Install warmup scheduler:
