@@ -27,6 +27,7 @@ If you find this project useful for your research, please consider citing:
   journal={arXiv preprint arXiv:2412.11008},
   year={2024}
 }
-
+## Acknowledgements
+This code is built on SANet [https://github.com/c-yn/SANet] and IRNeXt [https://github.com/c-yn/IRNeXt]. We thank the authors for sharing their codes of  PyTorch version.
 ## Contact
 Should you have any question, please contact Fangwei Hao.
