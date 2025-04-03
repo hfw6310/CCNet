@@ -147,7 +147,8 @@ class ResBlock(nn.Module):
         out = self.conv2(out)
 
         return out + x
-    
+
+### LDIM
 class cubic_attention(nn.Module):
     def __init__(self, dim, group, kernel) -> None:
         super().__init__()
