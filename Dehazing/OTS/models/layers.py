@@ -66,7 +66,6 @@ class SpanConvUX(torch.nn.Module):
 
         return fea1 * fea2
 
-### ERSM
 class BasicConv1(nn.Module):
     def __init__(self, in_channel, out_channel, kernel_size, stride, bias=True, norm=False, relu=True, transpose=False):
         super(BasicConv1, self).__init__()
@@ -93,7 +92,6 @@ class BasicConv1(nn.Module):
     def forward(self, x):
         return self.main(x)
 
-### RSAM
 class BasicConv(nn.Module):
     def __init__(self, in_channel, out_channel, kernel_size, stride, bias=True, norm=False, relu=True, transpose=False):
         super(BasicConv, self).__init__()
@@ -117,6 +115,7 @@ class BasicConv(nn.Module):
     def forward(self, x):
         return self.main(x)
 
+### ERSM / RSAM
 class ResBlock(nn.Module):
     def __init__(self, in_channel, out_channel, filter=False):
         super(ResBlock, self).__init__()
