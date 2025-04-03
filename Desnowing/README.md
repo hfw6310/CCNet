@@ -8,8 +8,6 @@
 python main.py --mode train --data_dir your_path/CSD
 ~~~
 
-### Evaluation
-#### Download the model [here](https://drive.google.com/drive/folders/1vNmEH2YNHQGQLjEM1XfvwMukIeb-ogKT?usp=sharing)
 #### Testing
 ~~~
 python main.py --data_dir your_path/CSD --test_model path_to_csd_model
