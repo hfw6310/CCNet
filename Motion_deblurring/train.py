@@ -59,9 +59,9 @@ def _train(model, args):
     model.to(device)
     inputs = torch.randn(1, 3, 256, 256).to(device)
     flops, params = profile(model, (inputs, ))     ##### thop.profile()
-    print(f'Network with flops(256 x 256): {flops/1e9:.9f} flops.\n')
+    print(f'Network with flops(256 x 256): {flops/1e9:.9f} G flops.\n')
     logfile = open(log_path, "a")
-    logfile.write(f'Network:  with flops(256 x 256): {flops/1e9:.9f} flops.\n')
+    logfile.write(f'Network:  with flops(256 x 256): {flops/1e9:.9f} G flops.\n')
     logfile.close()
     
     for epoch_idx in range(epoch, args.num_epoch + 1):
