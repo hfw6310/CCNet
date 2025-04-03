@@ -59,7 +59,7 @@ def _train(model, args):
     print(f"The number of model parameters is {num_parameter / 1000 ** 1:.6f}K")  
     logfile.close()
     
-    ##### thop.profile()
+    ##### thop.profile() for FLOPs
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model.to(device)
     inputs = torch.randn(1, 3, 256, 256).to(device)
