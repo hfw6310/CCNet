@@ -58,7 +58,17 @@ def _train(model, args):
     logfile.write(f"The number of model parameters is {num_parameter / 1000 ** 1:.6f}K\n")   
     print(f"The number of model parameters is {num_parameter / 1000 ** 1:.6f}K")  
     logfile.close()
-
+    
+    ##### thop.profile()
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    model.to(device)
+    inputs = torch.randn(1, 3, 256, 256).to(device)
+    flops, params = profile(model, (inputs, ))     ##### thop.profile()
+    print(f'Network with flops(256 x 256): {flops/1e9:.9f} flops.\n')
+    logfile = open(log_path, "a")
+    logfile.write(f'Network:  with flops(256 x 256): {flops/1e9:.9f} flops.\n')
+    logfile.close()
+    
     for epoch_idx in range(epoch, args.num_epoch + 1):
 
         epoch_timer.tic()
